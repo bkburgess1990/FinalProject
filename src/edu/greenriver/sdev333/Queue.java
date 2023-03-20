@@ -47,7 +47,7 @@ public class Queue<ItemType> implements Iterable<ItemType> {
      * Adds a specified item to the rear of the queue.
      * @param item item to be added
      */
-    public void enqueue(ItemType item) {
+    public void enQueue(ItemType item) {
         Node oldlast = last;
         last = new Node();
         last.data = item;
@@ -59,7 +59,6 @@ public class Queue<ItemType> implements Iterable<ItemType> {
         else {
             oldlast.next = last;
         }
-
         size++;
     }
 
@@ -67,7 +66,7 @@ public class Queue<ItemType> implements Iterable<ItemType> {
      * Removes and returns the item at the front of the queue.
      * @return the item that was at the front of the queue before it was removed
      */
-    public ItemType dequeue() {
+    public ItemType deQueue() {
         ItemType item = first.data;
         first = first.next;
         size--;
